@@ -48,4 +48,4 @@ password.env
 .sfdx/**
 PERSONAL.md
 
-.sf/orgs/**
+.sf/**
