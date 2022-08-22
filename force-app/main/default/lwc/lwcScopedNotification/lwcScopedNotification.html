@@ -1,0 +1,17 @@
+<template>
+    <div class={computeClasses} role="status">
+        <div class="slds-media__figure">
+            <lightning-icon variant={computeIconVariant} icon-name={computeIconName}
+                alternative-text={computeIconAlternativeText} size="small"></lightning-icon>
+        </div>
+        <div class="slds-media__body">
+            <slot onslotchange={handleSlotChange}></slot>
+
+            <template if:false={_hasSlot}>
+                <p if:true={message}>{message}&nbsp;
+                    <a if:true={linkMessage} target={target} onclick={handleClickButton} href={link}>{linkMessage}</a>
+                </p>
+            </template>
+        </div>
+    </div>
+</template>

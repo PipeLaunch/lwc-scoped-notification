@@ -1,0 +1,56 @@
+<template>
+    <section class="slds-grid slds-wrap slds-gutters grid-gap">
+        <div class="slds-col slds-size_1-of-1 slds-medium-size_4-of-12">
+            <lightning-card title="Types">
+                <div class="slds-var-p-horizontal_medium slds-var-p-vertical_small">
+                    <h3 class="slds-text-title_bold">Base</h3>
+                    <c-lwc-scoped-notification message="It looks as if duplicates exist for this lead." link="#"
+                        link-message="View Duplicates"></c-lwc-scoped-notification>
+
+                    <h3 class="slds-text-title_bold slds-var-m-top_medium">Warning</h3>
+                    <c-lwc-scoped-notification type="warning" message="It looks as if duplicates exist for this lead."
+                        link-message="View Duplicates"></c-lwc-scoped-notification>
+
+                    <h3 class="slds-text-title_bold slds-var-m-top_medium">Success</h3>
+                    <c-lwc-scoped-notification type="success" message="It looks as if duplicates exist for this lead."
+                        link-message="View Duplicates"></c-lwc-scoped-notification>
+
+                    <h3 class="slds-text-title_bold slds-var-m-top_medium">Error</h3>
+                    <c-lwc-scoped-notification type="error" message="It looks as if duplicates exist for this lead."
+                        link-message="View Duplicates"></c-lwc-scoped-notification>
+
+                    <h3 class="slds-text-title_bold slds-var-m-top_medium">Informational (dark-theme)</h3>
+
+                    <c-lwc-scoped-notification type="informational"
+                        message="It looks as if duplicates exist for this lead." link-message="View Duplicates">
+                    </c-lwc-scoped-notification>
+                </div>
+
+            </lightning-card>
+        </div>
+
+        <div class="slds-col slds-size_1-of-1 slds-medium-size_4-of-12">
+            <lightning-card title="Special usage">
+                <div class="slds-var-p-horizontal_medium slds-var-p-vertical_small">
+                    <h3 class="slds-text-title_bold">Add function to the link button</h3>
+
+                    <c-lwc-scoped-notification message="Show toast" button-action={buttonAction}
+                        link-message="Click here"></c-lwc-scoped-notification>
+
+                    <h3 class="slds-text-title_bold slds-var-m-top_medium">Add any content as slot</h3>
+                    <c-lwc-scoped-notification>
+                        This is a slot content
+                        <lightning-icon icon-name="doctype:image" alternative-text="Doc image"></lightning-icon>
+                    </c-lwc-scoped-notification>
+
+                    <h3 class="slds-text-title_bold slds-var-m-top_medium">Specify the link</h3>
+                    <c-lwc-scoped-notification message="Google search"
+                        link-message="Click here" target="_blank" link="https://www.google.com">
+                    </c-lwc-scoped-notification>
+                </div>
+
+            </lightning-card>
+        </div>
+
+    </section>
+</template>
